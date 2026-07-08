@@ -1,0 +1,56 @@
+:root {
+  --text: rgba(255, 255, 255, 0.72);
+  --text-h: #ffffff;
+  --accent: #b565ff;
+  --accent-2: #4fd1ff;
+  --good: #3ee9a0;
+  --danger: #ff6b81;
+
+  --glass-bg: rgba(255, 255, 255, 0.10);
+  --glass-bg-strong: rgba(255, 255, 255, 0.16);
+  --glass-border: rgba(255, 255, 255, 0.28);
+  --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+  --blur: 18px;
+  --radius: 18px;
+
+  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
+
+  font: 16px/145% var(--sans);
+  color-scheme: dark;
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(at 15% 15%, rgba(181, 101, 255, 0.55), transparent 55%),
+    radial-gradient(at 85% 10%, rgba(79, 209, 255, 0.45), transparent 55%),
+    radial-gradient(at 10% 85%, rgba(255, 107, 129, 0.4), transparent 55%),
+    radial-gradient(at 85% 90%, rgba(62, 233, 160, 0.35), transparent 55%),
+    linear-gradient(160deg, #120e26 0%, #1b1440 45%, #0d1b3a 100%);
+  background-attachment: fixed;
+}
+
+h1, h2, h3 {
+  color: var(--text-h);
+  font-weight: 600;
+}
+
+/* Reusable glass surface */
+.glass {
+  background: var(--glass-bg);
+  backdrop-filter: blur(var(--blur)) saturate(160%);
+  -webkit-backdrop-filter: blur(var(--blur)) saturate(160%);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius);
+  box-shadow: var(--glass-shadow);
+}
